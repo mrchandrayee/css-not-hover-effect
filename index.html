@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffd65c">
+  <title>CSS Not Hover Effect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <div class="topline">
+      <span class="tag">#MZcode</span>
+      <span class="tag">#HTML</span>
+      <span class="tag">#CSS</span>
+    </div>
+    <div class="social">♪ ◎ ▶ <strong>MzCode01</strong></div>
+    <header>
+      <h1>CSS <span>Not Hover</span> Effect</h1>
+      <p>More video on youtube @mzcode01</p>
+    </header>
+
+    <section class="gallery-wrap" aria-label="Hover to highlight an image">
+      <div class="container">
+        <div class="card"><img src="assets/1.jpg" alt="Portrait photograph one"></div>
+        <div class="card"><img src="assets/2.jpg" alt="Portrait photograph two"></div>
+        <div class="card"><img src="assets/3.jpg" alt="Portrait photograph three"></div>
+        <div class="card"><img src="assets/4.jpg" alt="Portrait photograph four"></div>
+      </div>
+    </section>
+
+    <section class="code-window" aria-label="Extracted source code">
+      <div class="window-head"><i></i><i></i><i></i></div>
+      <div class="tabs"><span>index.html</span><span class="selected">style.css</span></div>
+      <pre><code>/* Hover focus effect */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+img {
+  width: 200px;
+  border-radius: 10px;
+  -webkit-box-reflect: below 2.5px
+    linear-gradient(transparent, transparent,
+    rgba(3, 3, 3, 0.2));
+  border: 3px ridge #a5b1c2;
+  margin: 5px;
+}
+
+.card {
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.container:hover > :not(:hover) {
+  opacity: 0.3;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}</code></pre>
+    </section>
+    <p class="hint">Hover over any image to bring it into focus.</p>
+    <footer>HTML · CSS · NO FRAMEWORK REQUIRED</footer>
+  </main>
+</body>
+</html>
